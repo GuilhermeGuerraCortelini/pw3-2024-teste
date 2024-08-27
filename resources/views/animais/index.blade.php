@@ -6,7 +6,7 @@
 
 @section('conteudo')
 <p>
-    <a href="{{ route('animais.cadastrar') }}">Cadastrar animal</a>
+    <a class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded " href="{{ route('animais.cadastrar') }}"><i class="fas fa-plus mr-2"></i>Cadastrar animal</a>
 </p>
 <p>Veja nossa lista de animais para adoção</p>
 
