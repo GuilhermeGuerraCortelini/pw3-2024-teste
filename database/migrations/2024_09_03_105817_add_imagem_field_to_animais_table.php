@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('animais', function (Blueprint $table) {
-            //
+            $table->string('imagem', 255)->nullable()->default(null)->after('idade'); // nome, tamanho -> nullable = pode ser nulo
         });
     }
 
@@ -22,7 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('animais', function (Blueprint $table) {
-            //
+            $table->dropColumn('imagem'); // deletar a coluna
         });
     }
 };

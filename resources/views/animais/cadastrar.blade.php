@@ -28,7 +28,7 @@
     <input type="submit" value="Gravar">
 </form> -->
 
-<form method="post" action="{{ route('animais.gravar') }}" class="p-10 bg-white rounded shadow-xl">
+<form method="post" enctype="multipart/form-data" action="{{ route('animais.gravar') }}" class="p-10 bg-white rounded shadow-xl">
     @csrf
     <label class="block text-sm text-gray-600" for="name">Nome</label>
     <input type="text" class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" name="nome" placeholder="Nome"
@@ -38,6 +38,8 @@
     <input type="number" class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" name="idade" placeholder="Idade"
         value="{{ old('idade') }}">
     <br>
+    <label class="block text-sm text-gray-600" for="imagem">Imagem</label>
+    <input type="file" class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="imagem" name="imagem" placeholder="Imagem" value="{{ old('imagem') }}">
     <div class="mt-6">
         <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit">Gravar</button>
     </div>
